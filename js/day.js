@@ -84,6 +84,12 @@ if (m == 5 && dd == 4) {//青年节
         sessionStorage.setItem("isPopupWindow", "1");
     }
 }
+if (m == 5 && dd == 17) {//第一次记错GQ生日的日子
+    if (sessionStorage.getItem("isPopupWindow") != "1") {
+        Swal.fire("与夏天的较量可不能输哦\n你永远是最棒的那个");
+        sessionStorage.setItem("isPopupWindow", "1");
+    }
+}
 if (m == 5 && dd == 19) {//GQ生日
     if (sessionStorage.getItem("isPopupWindow") != "1") {
         Swal.fire("祝GQ生日快乐" + (y - 1998).toString() + "岁生日快乐！");
