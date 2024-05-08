@@ -1683,7 +1683,7 @@ h6::before {
   width:130%;
 }
 
-.tag-card:hover .category-card-front{
+.tag-card:hover .tag-card-front{
   transform:rotateY(-180deg);
 }
 
@@ -1692,7 +1692,7 @@ h6::before {
 }
 
 @media screen and (max-width:768px) {
-  .category-card {
+  .tag-card {
       width: 100%;
   }
 }
