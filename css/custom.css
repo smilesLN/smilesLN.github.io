@@ -507,7 +507,37 @@ div#archive {
   border: var(--border-style);
   border-radius: 20px;
 }
-/* 文章页、归档页、普通页面end */
+/* 文章页、归档页、普通页面 end */
+
+/* 文章封面箭头动画 star */
+.recent-post-arrow {
+  animation: ddd 3s linear infinite;
+}
+
+@keyframes ddd {
+  0% {
+    top: 30px;
+  }
+  10% {
+    top: 20px;
+  }
+  20% {
+    top: 30px;
+  }
+  30% {
+    top: 20px;
+  }
+  60% {
+    top: 22px;
+  }
+  90% {
+    top: 20px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+/* 文章封面箭头动画 end */
 
 /* 欢迎信息star */
 #welcome-info {
