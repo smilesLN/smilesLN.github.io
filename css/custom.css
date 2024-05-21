@@ -476,9 +476,14 @@ svg.social_icon {
 }
 /* 个人信息Follow me按钮 */
 #aside-content > .card-widget.card-info > #card-info-btn {
-  background-color: #3eb8be;
-  border-radius: 8px;
+  background-color: var(--theme-color) !important;
+  border-radius: 10px;
+  color: white;
 }
+#aside-content > .card-widget.card-info > #card-info-btn:hover {
+  background-color: rgb(237, 112, 155) !important;
+}
+
 /* 首页文章卡片 */
 #recent-posts > .recent-post-item {
   background: var(--trans-light);
@@ -506,12 +511,12 @@ div#archive {
 
 /* 欢迎信息star */
 #welcome-info {
-  background: linear-gradient(45deg, #e1c1a3, #765976);
+  background: linear-gradient(45deg, #e1c1a3, #89ecd7);
   border-radius: 18px;
   padding: 8px;
 }
 [data-theme="dark"] #welcome-info {
-  background: #5eb3be;
+  background: #000000;
 }
 /* 欢迎信息end */
 
@@ -2129,51 +2134,6 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 2px 0 0 2px;
 }
 
-
-/* 首页文章卡片 */
-#recent-posts > .recent-post-item {
-  background: var(--trans-light);
-  backdrop-filter: var(--backdrop-filter);
-  border-radius: 25px;
-  border: var(--border-style);
-}
-
-/* 首页侧栏卡片 */
-#aside-content .card-widget {
-  background: var(--trans-light);
-  backdrop-filter: var(--backdrop-filter);
-  border-radius: 18px;
-  border: var(--border-style);
-}
-
-/* 文章页、归档页、普通页面 */
-div#post,
-div#page,
-div#archive {
-  background: var(--trans-light);
-  backdrop-filter: var(--backdrop-filter);
-  border: var(--border-style);
-  border-radius: 20px;
-}
-
-/* 导航栏颜色 */
-#page-header.nav-fixed #nav {
-  background: linear-gradient(60deg, #ffd7e4 0, #c8f1ff 93%);
-  opacity: 0.95;
-  backdrop-filter: var(--backdrop-filter);
-}
-[data-theme="dark"] #page-header.nav-fixed #nav {
-  background: rgba(0, 0, 0, 0.95) !important;
-}
-
-/* 夜间模式遮罩 */
-[data-theme="dark"] #recent-posts > .recent-post-item,
-[data-theme="dark"] #aside-content .card-widget,
-[data-theme="dark"] div#post,
-[data-theme="dark"] div#archive,
-[data-theme="dark"] div#page {
-  background: var(--trans-dark);
-}
 
 
 /* 调节字体显示栏目 */

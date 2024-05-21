@@ -210,6 +210,6 @@ function showWelcome() {
     else timeChange = "夜深了，早点休息，少熬夜";
 
     //自定义文本需要放的位置
-    document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离站长约有<span>${dist}</span>公里，当前的IP地址为： <span>${ip}</span>，${posdesc}`;
+    document.getElementById("welcome-info").innerHTML = `<b><center>🎉 欢迎信息 🎉</center>&emsp;&emsp;欢迎来自<span style="color:var(--blue-custom)">${pos}</span>的小伙伴，${timeChange}<br>你距离站长约有<span style="color:var(--blue-custom)">${dist}</span>公里，当前的IP地址为： <span style="color:var(--blue-custom)">${ip}</span>，${posdesc}`;
     // document.getElementById("sidebar-welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离ichika约有<span>${dist}</span>公里，${posdesc}`;
 }

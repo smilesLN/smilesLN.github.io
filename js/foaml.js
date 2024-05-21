@@ -2613,46 +2613,8 @@ if (localStorage.getItem("reset_2") == undefined) {
     document.getElementById("transPercent").innerText = `:root{--trans-light: rgba(253, 253, 253, ${newTransNum}%) !important; --trans-dark: rgba(25, 25, 25, ${newTransNum}%) !important} `;
   };
   
-  
-  // 模糊度调节滑块
-  if (localStorage.getItem("blurRad") == undefined) {
-    localStorage.setItem("blurRad", 20);
-  }
-  var curBlur = localStorage.getItem("blurRad"); // 当前模糊半径
-  var miniBlur = curBlur * 0.95;
-  document.getElementById("blurNum").innerText = `:root{--blur-num: blur(${curBlur}px) saturate(120%) !important`;
-  function setBlurNum() {
-    var elem = document.getElementById("blurSet");
-    var newBlur = elem.value;
-    var target = document.querySelector('.blurValue');
-    target.innerHTML = "模糊半径 (开启模糊生效 0px-100px): " + newBlur + "px";
-    localStorage.setItem("blurRad", newBlur);
-    curBlur = newBlur;
-    miniBlur = curBlur * 0.95;
-    // var max = elem.getAttribute("max");
-    document.querySelector('#rang_blur').style.width = miniBlur + "%";
-    document.getElementById("blurNum").innerText = `:root{--blur-num: blur(${curBlur}px) saturate(120%) !important`;
-  };
-  
-  
-  // 模糊效果开关
-  if (localStorage.getItem("blur") == undefined) {
-    localStorage.setItem("blur", 0);
-  }
-  if (localStorage.getItem("blur") == 0) {
-    document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: none}`;
-  } else {
-    document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: var(--blur-num)}`;
-  }
-  function setBlur() {
-    if (document.getElementById("blur").checked) {
-      localStorage.setItem("blur", 1);
-      document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: var(--blur-num)}`;
-    } else {
-      localStorage.setItem("blur", 0);
-      document.getElementById("settingStyle").innerText = `:root{--backdrop-filter: none}`;
-    }
-  }
+
+
   
   // 切换自定义颜色
   var defineColor = localStorage.getItem("blogbg") && localStorage.getItem("blogbg").charAt(0) == '#' ? localStorage.getItem("blogbg") : '#F4D88A';
@@ -2856,11 +2818,7 @@ if (localStorage.getItem("reset_2") == undefined) {
     <p class="rang_width" id="rang_trans" style="width:${curTransMini}%"></p>
   </div>
   
-  <div class="blurValue" style="font-weight:bold;padding-left:10px">模糊半径 (开启模糊生效 0px-100px): ${curBlur} px</div>
-  <div class="range">
-    <input id="blurSet" type="range" min="0" max="100" step="1" value="${curBlur}" oninput="setBlurNum()">
-    <p class="rang_width" id="rang_blur" style="width:${miniBlur}%"></p>
-  </div>
+
   
   
   <div class="content" style="display:flex">
